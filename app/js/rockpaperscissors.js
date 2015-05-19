@@ -24,19 +24,36 @@ function randomPlay() {
 function getPlayerMove(move) {
     var move = x || 'getInput()';
 
+if(x === "rock")    {
+    return "rock";
+}else if (x === "paper")    {
+    return "paper";
+}else if ( x === "scissors")    {
+} else getInput();
+
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return move;
+    return x;
 }
 
 function getComputerMove(move) {
     var move = y || 'randomPlay()';
 
+ var y = Math.random();
+    if (y < 0.33) {
+        return "rock";
+    } else if (y < 0.66) {
+        return "paper";
+    } else {
+        return "scissors";
+    }
+}
+
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+    return y;
 }
 
 function getWinner(playerMove,computerMove) {
